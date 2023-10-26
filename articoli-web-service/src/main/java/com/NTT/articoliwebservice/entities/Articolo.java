@@ -40,6 +40,10 @@ public class Articolo implements Serializable {
     @Max(value = 99, message = "{Size.Articolo.pzCart.Validation}")
     private Integer pzCart;
 
+    @Column(name = "PREZZO")
+    @Max(value = 99, message = "{Size.Articolo.prezzo.Validation}")
+    private double prezzo;
+
     @Column(name = "PESONETTO")
     @Min(value = (long) 0.01, message = "{Min.Articolo.pesoNetto.Validation}")
     private Double pesoNetto;
@@ -80,6 +84,14 @@ public class Articolo implements Serializable {
 
     public String getDescrizione() {
         return descrizione;
+    }
+
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
     }
 
     public void setDescrizione(String descrizione) {

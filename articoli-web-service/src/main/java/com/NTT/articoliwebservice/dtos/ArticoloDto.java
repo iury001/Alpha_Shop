@@ -20,7 +20,7 @@ public class ArticoloDto {
     private double pesoNetto;
     private String idStatoArt;
     private Date dataCreazione;
-    private double prezzo = 0;
+    private double prezzo;
 
     private Set<Barcode> barcode = new HashSet<>();
     private Ingrediente ingrediente;
